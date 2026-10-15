@@ -1,0 +1,16 @@
+! Reconstructed from the lab discussion; not a full R2 configuration.
+! EIGRP AS 100
+router eigrp 100
+ network 10.0.0.4 0.0.0.3
+ network 172.16.2.2 0.0.0.0
+ no auto-summary
+ redistribute rip metric 100000 100 255 1 1500
+
+! RIP v2
+router rip
+ version 2
+ no auto-summary
+ network 10.0.0.0
+ network 172.16.0.0
+! Prior lab state indicated EIGRP redistribution into RIP as well.
+! Verify actual saved configuration and prevent redistribution loops.

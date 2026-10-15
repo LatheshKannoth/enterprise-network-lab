@@ -1,0 +1,14 @@
+! Reference notes only — not a complete DSW configuration.
+! VLANs: 10 USERS, 20 ADMIN, 30 SERVERS, 99 MANAGEMENT
+! HSRP virtual gateway addresses:
+! VLAN 10: 192.168.10.1
+! VLAN 20: 192.168.20.1
+! VLAN 30: 192.168.30.1
+! VLAN 99: 192.168.99.1
+!
+! DSW1 SVI addresses: .2 in each subnet; priority 110; preempt.
+! DSW2 SVI addresses: .3 in each subnet; priority 100; preempt.
+! DSW1 had ip routing enabled and OSPF process 1, router ID 1.1.1.1.
+!
+! EtherChannel: Fa0/3-4, channel-group 1, LACP, Port-channel1.
+! Trunks carried VLANs 10,20,30,99. Confirm actual per-port configuration.

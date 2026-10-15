@@ -1,0 +1,13 @@
+! Reconstructed from the lab discussion; not a full R4 configuration.
+router eigrp 100
+ network 10.0.0.4 0.0.0.3
+ no auto-summary
+ redistribute ospf 1 metric 100000 100 255 1 1500
+
+router ospf 1
+ router-id 4.4.4.4
+ network 10.0.0.0 0.0.0.3 area 0
+ redistribute eigrp 100 subnets
+
+! A static default route to Null0 and default-information originate were
+! discussed for the lab. Verify exact syntax and intent in the saved export.

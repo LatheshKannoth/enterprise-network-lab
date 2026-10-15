@@ -1,0 +1,16 @@
+! Reconstructed from the lab discussion; not a full R3 configuration.
+! RIP v2
+router rip
+ version 2
+ no auto-summary
+ network 10.0.0.0
+ network 172.16.0.0
+ redistribute bgp 65003 metric 1
+
+! BGP AS 65003
+router bgp 65003
+ neighbor 10.0.0.14 remote-as 65005
+ network 172.16.3.3 mask 255.255.255.255
+! A later R5 BGP table showed 192.168.30.0/24 via R3.
+! Verify whether this prefix is originated using an explicit BGP network statement
+! or another mechanism in the saved configuration before using this snippet.
