@@ -1,4 +1,4 @@
-Built with new fwature in https://github.com/windowpc590/Network-lab-writeups/blob/main/README.md#pingmynetwork-sandbox-challenge
+Built as part of  [https://github.com/windowpc590/Network-lab-writeups/blob/main/README.md#pingmynetwork-sandbox-challenge](https://pingmynetwork.com/event/sandbox-challenge)
 # Enterprise Network Lab — PMN-OS 3.0
 
 A multi-protocol enterprise network lab built and validated in **PingMyNetwork (PMN-OS 3.0)**. The project demonstrates VLAN segmentation, first-hop redundancy, Layer 2 redundancy, dynamic routing, route redistribution, and end-to-end reachability between an enterprise server network and an ISP-side loopback.
